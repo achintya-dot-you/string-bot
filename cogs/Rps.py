@@ -103,12 +103,12 @@ class Rps(commands.Cog):
   await ctx.defer()
   view = MyView(ctx,self.client)
   
-  await ctx.respond(embed=discord.embed(title="Pick rock, paper or scissors!",color=discord.Color.purple()),view=view)
+  await ctx.respond(embed=discord.Embed(title="Pick rock, paper or scissors!",color=discord.Color.purple()),view=view)
 
  @commands.command(aliases=["rps"])
  async def rockpaperscissors(self,ctx):
   view=MyView(ctx,self.client)
-  await ctx.send(embed=discord.embed(title="Pick rock, paper or scissors!",color=discord.Color.purple()),view=view)
+  await ctx.send(embed=discord.Embed(title="Pick rock, paper or scissors!",color=discord.Color.purple()),view=view)
   
 
 
