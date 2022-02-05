@@ -488,7 +488,7 @@ class Cricket(commands.Cog):
   def __init__(self,client):
     self.client=client
   @slash_command(name="cricket", description="Play cricket with the bot or another member")
-  async def cricket(ctx,member:Option(discord.Member,"Member to play cricket with", required=False, default=None)):
+  async def cricket1(ctx,member:Option(discord.Member,"Member to play cricket with", required=False, default=None)):
     await ctx.defer()
     embed = discord.Embed(description = "The game of cricket is now starting. Below, you see 5 Buttons, pick one, if your choice and the bot's choice is the same, you get eliminated, if not, you continue playing and your number chosen adds up to your score", color = discord.Color.purple())
 

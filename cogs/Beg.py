@@ -15,7 +15,7 @@ class Beg(commands.Cog):
    myBot.db.commit()
    await ctx.send(f"Someone gave <@!{ctx.author.id}> {randMoney} coins")
  @slash_command(name="beg",description="Beg some coins and get rich :D")
- async def beg(self,ctx):
+ async def beg1(self,ctx):
   await ctx.defer()
   randMoney = random.randrange(0,1001)
   myBot.cursor.execute(f"INSERT INTO economy (user_id, username, balance, commands_used) VALUES ({ctx.author.id},'{ctx.author}', 1000+{randMoney}, 1) ON DUPLICATE KEY UPDATE balance = balance+{randMoney};")

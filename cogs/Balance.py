@@ -22,7 +22,7 @@ class Balance(commands.Cog):
     balance = myBot.cursor.fetchone()
     await ctx.send(embed=discord.Embed(title=f"{member}'s balance is {balance[0]}.",color=discord.Color.nitro_pink()))
  @slash_command(name="balance",description="Tells you your or someone else's balance")
- async def balance(self,ctx,member:Option(discord.Member,"Member to get the balance from",required=False,default=None)):
+ async def balance1(self,ctx,member:Option(discord.Member,"Member to get the balance from",required=False,default=None)):
   await ctx.defer()
   if member==None:
     myBot.cursor.execute(f"INSERT INTO economy (user_id, username, balance, commands_used) VALUES ({ctx.author.id},'{ctx.author}', 1000, 0) ON DUPLICATE KEY UPDATE balance = balance;")

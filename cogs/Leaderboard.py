@@ -7,7 +7,7 @@ class Leaderboard(commands.Cog):
  def __init__(self,client):
   self.client=client
  @slash_command(name="leaderboard",description="Get the leaderboard for various categories")
- async def leaderboard(self,ctx,category:Option(str, "Category for leaderboard", required= True, choices = ["Cricket Score","Commands Used"]), top: Option(int, "How many top entries", required = False, default = 10, choices = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])):
+ async def leaderboard1(self,ctx,category:Option(str, "Category for leaderboard", required= True, choices = ["Cricket Score","Commands Used"]), top: Option(int, "How many top entries", required = False, default = 10, choices = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])):
    await ctx.defer()
    if category == "Cricket Score":
      aaaa=""

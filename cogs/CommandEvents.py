@@ -29,6 +29,7 @@ class CommandEvents(commands.Cog):
     abc = myBot.cursor.fetchone()
     prefix = abc[0]
     await ctx.send(f'Hey <@{author}>, My prefix is `{prefix}`')
+    return
   # if message.content.startswith("=="):  
   #   increaseCommandsUsed(message.author.id,message.author)
 

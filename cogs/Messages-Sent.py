@@ -6,8 +6,8 @@ from discord.commands import Option,slash_command
 class MessagesSent(commands.Cog):
  def __init__(self,client):
   self.client=client
- @slash_command(description = "Check how many messages you have sent in this server", name="messages-sent")
- async def messagessent(self,ctx, member : Option(discord.Member, "Check another person's messages sent", required=False, default=None)):
+ @slash_command(name="messagessent",description = "Check how many messages you have sent in this server", name="messages-sent")
+ async def messagessent1(self,ctx, member : Option(discord.Member, "Check another person's messages sent", required=False, default=None)):
    await ctx.defer()
    if member==None:
      myBot.cursor.execute(f"INSERT INTO a{ctx.guild.id} (user_id, username, messages_sent) VALUES ({ctx.author.id},'{ctx.author}', 0) ON DUPLICATE KEY UPDATE messages_sent = messages_sent;")

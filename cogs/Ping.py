@@ -9,8 +9,8 @@ from discord.commands import Option,slash_command
 class Ping(commands.Cog):
  def __init__(self,client):
      self.client=client
- @slash_command(description="Returns the bot's ping")
- async def ping(self,ctx):
+ @slash_command(name="ping",description="Returns the bot's ping")
+ async def ping1(self,ctx):
    await ctx.defer()
    embed = discord.Embed(title=f" :electric_plug: :regional_indicator_p::regional_indicator_i::regional_indicator_n::regional_indicator_g: :regional_indicator_i::regional_indicator_s:  {math.trunc((self.client.latency)*1000)}ms :electric_plug: ",color=discord.Colour.green())
    await ctx.respond(embed=embed)

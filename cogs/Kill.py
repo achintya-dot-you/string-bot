@@ -10,8 +10,8 @@ kill_reasons = ["went broke and died....","never knew about Reddit, died of bore
 class Kill(commands.Cog):
  def __init__(self,client):
   self.client=client
- @slash_command(description="People die, no biggie :D")
- async def kill(self,ctx, member : Option(discord.Member , "Person whom you wanna kill ", required=True,default=None)):
+ @slash_command(name="kill",description="People die, no biggie :D")
+ async def kill1(self,ctx, member : Option(discord.Member , "Person whom you wanna kill ", required=True,default=None)):
    await ctx.defer()
    if member ==None:
      await ctx.send("You need to specify a member, *genius*!")

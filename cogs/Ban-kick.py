@@ -7,8 +7,8 @@ from discord.commands import Option,slash_command
 class BanKick(commands.Cog):
  def __init__(self,client):
      self.client = client
- @slash_command(description="Ban people(only works with mod perms)")
- async def ban(self,ctx,member:Option(discord.Member,"Member to ban",required=True), reason:Option(str,"Reason to ban the member",default = "No reason provided", required = False)):
+ @slash_command(name="ban",description="Ban people(only works with mod perms)")
+ async def ban1(self,ctx,member:Option(discord.Member,"Member to ban",required=True), reason:Option(str,"Reason to ban the member",default = "No reason provided", required = False)):
    await ctx.defer()
    smolMember=member
    try:
@@ -23,8 +23,8 @@ class BanKick(commands.Cog):
      await ctx.respond(embed=embed)
      return
 
- @slash_command(description="Kicks a member(only works with mod perms)")
- async def kick(self,ctx,member:Option(discord.Member, "Member to be kicked " ,required=True, default=None), reason:Option(str, "Reason to kick the member.", default="No reason provided", required=False)):
+ @slash_command(name="kick",description="Kicks a member(only works with mod perms)")
+ async def kick1(self,ctx,member:Option(discord.Member, "Member to be kicked " ,required=True, default=None), reason:Option(str, "Reason to kick the member.", default="No reason provided", required=False)):
     await ctx.defer()
     smolMember=member
     try:

@@ -6,8 +6,8 @@ class Gift(commands.Cog):
  def __init__(self,client):
   self.client=client
 
- @slash_command(description="Gift another user some of your sweet money <3")
- async def gift(self,ctx, member:Option(discord.Member, "Person whom you wanna give your money ", default = None, required=True), amount:Option(int,"Number of coins to give", required=True, default = None)):
+ @slash_command(name="gift",description="Gift another user some of your sweet money <3")
+ async def gift1(self,ctx, member:Option(discord.Member, "Person whom you wanna give your money ", default = None, required=True), amount:Option(int,"Number of coins to give", required=True, default = None)):
    await ctx.defer()
    myBot.cursor.execute(f"INSERT INTO economy (user_id, username, balance, commands_used) VALUES ({ctx.author.id},'{ctx.author}', 1000, 0) ON DUPLICATE KEY UPDATE balance = balance;")
    myBot.db.commit()
