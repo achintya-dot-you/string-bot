@@ -6,7 +6,7 @@ from discord.commands import Option,slash_command
 class MessagesSent(commands.Cog):
  def __init__(self,client):
   self.client=client
- @slash_command(name="messagessent",description = "Check how many messages you have sent in this server", name="messages-sent")
+ @slash_command(name="messagessent",description = "Check how many messages you have sent in this server")
  async def messagessent1(self,ctx, member : Option(discord.Member, "Check another person's messages sent", required=False, default=None)):
    await ctx.defer()
    if member==None:
