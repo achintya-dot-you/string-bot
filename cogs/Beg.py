@@ -6,7 +6,7 @@ import myBot
 from discord.commands import Option,slash_command
 
 class Beg(commands.Cog):
- def __init__(self,client) -> None:
+ def __init__(self,client):
   self.client=client
  @commands.command()
  async def beg(self,ctx):

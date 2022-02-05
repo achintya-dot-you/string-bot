@@ -6,7 +6,7 @@ import myBot
 from discord.commands import Option,slash_command
 
 class Clear(commands.Cog):
- def __init__(self,client) -> None:
+ def __init__(self,client):
     self.client = client
  @commands.command()
  async def clear(self,ctx, amount=20):

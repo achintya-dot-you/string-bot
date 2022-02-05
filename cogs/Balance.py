@@ -5,7 +5,7 @@ import myBot
 from discord.commands import Option,slash_command
 
 class Balance(commands.Cog):
- def __init__(self,client) -> None:
+ def __init__(self,client):
      self.client=client
  @commands.command(aliases=["bal"])
  async def balance(ctx, member:discord.Member=None):

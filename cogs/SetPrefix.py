@@ -4,7 +4,7 @@ import myBot
 from discord.commands import Option,slash_command
 
 class SetPrefix(commands.Cog):
- def __init__(self,client) -> None:
+ def __init__(self,client):
   self.client=client
  @commands.command(aliases=["sp"])
  async def setprefix(self,ctx,prefix:str):

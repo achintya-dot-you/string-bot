@@ -23,7 +23,7 @@ class CommandEvents(commands.Cog):
  async def on_message(self,message):
   if message.author.id == self.client.user.id:
     return
-  if message.content=="<@!931237127650426911>":
+  if message.content=="<@!939185469315489853>":
     ctx=message.channel
     author = message.author.id
     myBot.cursor.execute(f"SELECT prefix FROM guildIds WHERE guildId = {ctx.guild.id};")

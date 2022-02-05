@@ -7,7 +7,7 @@ import math
 from discord.commands import Option,slash_command
 
 class Ping(commands.Cog):
- def __init__(self,client) -> None:
+ def __init__(self,client):
      self.client=client
  @slash_command(description="Returns the bot's ping")
  async def ping(self,ctx):

@@ -8,7 +8,7 @@ kill_reasons = ["went broke and died....","never knew about Reddit, died of bore
 "had a high ping in Fortnite and banged their head on the wall, only to discover they had brain cancer and died.",
 "got bro-zoned :d","used anime powers, just to kill themselves." ]
 class Kill(commands.Cog):
- def __init__(self,client) -> None:
+ def __init__(self,client):
   self.client=client
  @slash_command(description="People die, no biggie :D")
  async def kill(self,ctx, member : Option(discord.Member , "Person whom you wanna kill ", required=True,default=None)):
