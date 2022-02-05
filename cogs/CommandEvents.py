@@ -2,7 +2,6 @@ from discord.ext import commands
 import discord
 import datetime
 import myBot
-
 def increaseCommandsUsed(userid, username):
  myBot.cursor.execute(f"INSERT INTO economy (user_id,username, balance, commands_used, fc) VALUES ({userid},'{username}',1000,1, 0) ON DUPLICATE KEY UPDATE commands_used = commands_used+1;")
  myBot.db.commit()
@@ -30,13 +29,13 @@ class CommandEvents(commands.Cog):
     abc = myBot.cursor.fetchone()
     prefix = abc[0]
     await ctx.send(f'Hey <@{author}>, My prefix is `{prefix}`')
-  if message.content.startswith("=="):  
-    increaseCommandsUsed(message.author.id,message.author)
+  # if message.content.startswith("=="):  
+  #   increaseCommandsUsed(message.author.id,message.author)
 
   myBot.cursor.execute(f"INSERT INTO a{message.guild.id} (user_id, username, messages_sent) VALUES ({message.author.id},'{message.author}',1) ON DUPLICATE KEY UPDATE messages_sent=messages_sent+1;")
   myBot.db.commit()
 
 
-  await self.client.process_commands(message)
+  #await self.client.process_commands(message)
 def setup(client):
  client.add_cog(CommandEvents(client))

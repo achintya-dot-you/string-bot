@@ -24,4 +24,4 @@ class Beg(commands.Cog):
 
 
 def setup(client):
- client.add_cog(Beg(client))
+  client.add_cog(Beg(client))

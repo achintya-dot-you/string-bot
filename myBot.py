@@ -48,6 +48,7 @@ def increaseCommandsUsed(userid, username):
 #----------------------FUN COMMANDS -------------
 
 #------RUN STUFF -------
+'''
 lst = [f for f in os.listdir("cogs/") if os.path.isfile(os.path.join("cogs/", f))]
 no_py = [s.replace('.py', '') for s in lst]
 startup_extensions = ["cogs." + no_py for no_py in no_py]
@@ -59,4 +60,17 @@ try:
 
 except Exception as getgood:
   print(getgood)
+  '''
+client.load_extension('cogs.Balance')
+client.load_extension('cogs.Ban-kick')
+client.load_extension('cogs.Beg')
+client.load_extension('cogs.Clear')
+client.load_extension('cogs.CommandEvents')
+client.load_extension('cogs.Cricket')
+client.load_extension('cogs.Gift')
+client.load_extension('cogs.Kill')
+client.load_extension('cogs.Leaderboard')
+client.load_extension('cogs.Messages-Sent')
+client.load_extension('cogs.Ping')
+client.load_extension('cogs.SetPrefix')
 client.run(os.environ["TOKEN"])
