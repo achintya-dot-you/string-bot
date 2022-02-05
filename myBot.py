@@ -1,3 +1,4 @@
+import dotenv
 dotenv.load_dotenv()
 import math
 from tkinter.messagebox import YES
@@ -13,7 +14,7 @@ import random
 from discord.ext import commands, tasks
 from discord.commands import Option
 import discord.ext
-import dotenv
+
 db = mysql.connector.connect(
  host="34.93.32.224",
  user="root",
