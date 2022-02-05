@@ -15,7 +15,7 @@ import discord.ext
 db = mysql.connector.connect(
  host="34.93.32.224",
  user="root",
- passwd="test123",
+ passwd=os.environ("passwd"),
  database="testdatabase"
 )
 cursor=db.cursor()
@@ -56,4 +56,4 @@ try:
 
 except Exception as getgood:
   print(getgood)
-client.run(TOKEN)
+client.run(os.environ("TOKEN"))
