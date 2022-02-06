@@ -5,7 +5,7 @@ import myBot
 def increaseCommandsUsed(userid, username):
  myBot.cursor.execute(f"INSERT INTO economy (user_id,username, balance, commands_used, fc) VALUES ({userid},'{username}',1000,1, 0) ON DUPLICATE KEY UPDATE commands_used = commands_used+1;")
  myBot.db.commit()
-prefixofGuild = ""
+prefixofGuild = "=="
 class CommandEvents(commands.Cog):
  def __init__(self,client):
 
