@@ -8,7 +8,7 @@ class Balance(commands.Cog):
  def __init__(self,client):
     self.client=client
  @commands.command(aliases=["bal"])
- async def balance(ctx, member:discord.Member=None):
+ async def balance(self,ctx, member:discord.Member=None):
   if member==None:
     myBot.cursor.execute(f"INSERT INTO economy (user_id, username, balance, commands_used) VALUES ({ctx.author.id},'{ctx.author}', 1000, 0) ON DUPLICATE KEY UPDATE balance = balance;")
     myBot.db.commit()
