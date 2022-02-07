@@ -30,7 +30,7 @@ async def get_prefix(client, message):
         return prefix
     except Exception:
         return "=="
-client = commands.Bot(command_prefix=get_prefix, intents=discord.Intents.all(), debug_guilds = [816334274545319996,763348615233667082])
+client = commands.Bot(command_prefix=get_prefix, intents=discord.Intents.all(), debug_guilds = [816334274545319996,763348615233667082,884279584659476511])
 client.remove_command("help")
 
 @client.command()
@@ -60,4 +60,4 @@ try:
 except Exception as getgood:
   print(getgood)
 
-client.run(os.environ["TOKEN"])
+client.run("OTM5MTg1NDY5MzE1NDg5ODUz.Yf1KoQ.Bm-0x6y3A0Sx-RCExmnp6RmxdF4")

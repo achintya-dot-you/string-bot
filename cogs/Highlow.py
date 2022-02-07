@@ -52,7 +52,7 @@ class Highlow(commands.Cog):
   embed=discord.Embed(title=f"{ctx.author}'s Highlow game",description=f"I have picked a number between **1 and {int(difficultyMeter[difficulty])-1}**. \n Is it above, below, or equal to **{number}**.",color=discord.Color.purple())
   await ctx.respond(embed=embed,view=view)
  @commands.command(aliases=["hl"])
- async def highlow(self,ctx,difficulty):
+ async def highlow(self,ctx,*,difficulty):
   number=random.randrange(1,difficultyMeter[difficulty])
   view=MyView(ctx,difficulty,number)
   embed=discord.Embed(title=f"{ctx.author}'s Highlow game",description=f"I have picked a number between **1 and {int(difficultyMeter[difficulty])-1}**. \n Is it above, below, or equal to **{number}**.",color=discord.Color.purple())
