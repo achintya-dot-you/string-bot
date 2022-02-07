@@ -60,4 +60,4 @@ try:
 except Exception as getgood:
   print(getgood)
 
-client.run("OTM5MTg1NDY5MzE1NDg5ODUz.Yf1KoQ.Bm-0x6y3A0Sx-RCExmnp6RmxdF4")
+client.run(os.environ["TOKEN"])
