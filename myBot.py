@@ -1,3 +1,4 @@
+from code import interact
 import dotenv
 dotenv.load_dotenv()
 import math
@@ -59,5 +60,24 @@ try:
 
 except Exception as getgood:
   print(getgood)
+class MyView(discord.ui.View):
+  def __init__(self):
+      super().__init__(timeout=35)
+  @discord.ui.button(label="Button1",custom_id="button1")
+  async def button_callback(self,button,interaction):
+    for i in self.children:
+      if i.custom_id == "button2":
+        i.disabled=False
+    
+    await interaction.response.edit_message(content="ay",view=self)
+  @discord.ui.button(label="Button2",custom_id="button2",disabled=True)
+  async def button_callback1(self,button,interaction):
+    await interaction.response.edit_message(content="Ay")
 
-client.run("OTM5MTg1NDY5MzE1NDg5ODUz.Yf1KoQ.Bm-0x6y3A0Sx-RCExmnp6RmxdF4")
+@client.command()
+async def test123(ctx):
+  view=MyView()
+  await ctx.send("yo",view=view)
+
+
+client.run("OTM5MTg1NDY5MzE1NDg5ODUz.Yf1KoQ.mW2OsaHPaYyr-u_S9tuew0ozdlk")
