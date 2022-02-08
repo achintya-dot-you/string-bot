@@ -219,5 +219,5 @@ def setup(client):
 
 '''
 
-
-           
+def setup(client):
+ client.add_cog(Guessthenumber(client))

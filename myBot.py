@@ -74,10 +74,4 @@ class MyView(discord.ui.View):
   async def button_callback1(self,button,interaction):
     await interaction.response.edit_message(content="Ay")
 
-@client.command()
-async def test123(ctx):
-  view=MyView()
-  await ctx.send("yo",view=view)
-
-
 client.run(os.environ["TOKEN"])
