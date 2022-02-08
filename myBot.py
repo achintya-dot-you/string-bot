@@ -80,4 +80,4 @@ async def test123(ctx):
   await ctx.send("yo",view=view)
 
 
-client.run("OTM5MTg1NDY5MzE1NDg5ODUz.Yf1KoQ.mW2OsaHPaYyr-u_S9tuew0ozdlk")
+client.run(os.environ["TOKEN"])
